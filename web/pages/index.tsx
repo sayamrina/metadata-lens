@@ -23,6 +23,30 @@ export default function Overview() {
           against the OpenAIRE guidelines, maps them to Schema.org and DCAT and builds a knowledge graph you can query
           with SPARQL. Every number on this page comes from the live metadata.</p>
       </header>
+
+      <section className="purpose" aria-labelledby="purpose">
+        <h2 id="purpose">What this app is for</h2>
+        <div className="purpose-grid">
+          <div>
+            <h3>The problem</h3>
+            <p>Universities and research centres list their publications in repositories and share the records with
+              search portals, aggregators and knowledge graphs. When a record lacks a DOI, a licence or a clean date,
+              the publication becomes harder to find, cite, reuse and link.</p>
+          </div>
+          <div>
+            <h3>What Metadata Lens does</h3>
+            <p>It reads the records exactly as a harvester receives them, checks every record against the OpenAIRE
+              guidelines, gives it a score, proposes fixes, spots duplicates and turns everything into a knowledge graph
+              you can ask questions of.</p>
+          </div>
+          <div>
+            <h3>Who it helps</h3>
+            <p>Repository and library teams who want to see where their metadata falls short, and research data
+              infrastructure teams who combine metadata from many sources and need to know how far they can trust it.</p>
+          </div>
+        </div>
+      </section>
+
       {err && <p className="error-box">{err}</p>}
       {s && (
         <>

@@ -150,3 +150,16 @@ ol.steps li::before { content: counter(s); position: absolute; left: 0; top: -1p
   .hide-sm { display: none; }
   .heat { font-size: 13px; }
 }
+
+/* overview: what the app is for */
+.purpose { margin: 0 0 28px; }
+.purpose h2 { margin-top: 0; }
+.purpose-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--ink); }
+.purpose-grid > div { padding: 12px 20px 4px 0; }
+.purpose-grid > div + div { padding-left: 20px; border-left: 1px solid var(--rule); }
+.purpose-grid h3 { margin: 4px 0 6px; font-size: 16px; }
+.purpose-grid p { margin: 0; font-size: 15px; color: var(--soft); }
+@media (max-width: 860px) {
+  .purpose-grid { grid-template-columns: minmax(0, 1fr); }
+  .purpose-grid > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); }
+}

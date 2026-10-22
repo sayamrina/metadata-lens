@@ -16,10 +16,15 @@ export default function About() {
         <p>Metadata Lens is my own project. It works on real, public metadata and is rebuilt from the repositories every week.</p>
       </header>
       <div className="prose">
-        <h2>Why</h2>
-        <p>Research metadata is only useful if it is complete, consistent and connected. Repositories share it over OAI-PMH,
-          and aggregators and knowledge graphs build on it. Metadata Lens shows what a harvester actually receives, which
-          checks a record passes, and what a knowledge graph built from it can answer.</p>
+        <h2>What this app is for</h2>
+        <p>Research repositories describe each publication with metadata: title, authors, date, DOI, access right,
+          licence, language and more. They share these records over OAI-PMH with search portals, aggregators such as
+          OpenAIRE and research knowledge graphs. If the metadata is incomplete or inconsistent, publications are harder
+          to find, cite, reuse and link.</p>
+        <p>Metadata Lens shows what a harvester actually receives, how complete and correct those records are, what could
+          be fixed, and what a knowledge graph built from them can answer. It is meant for repository and library teams
+          who want to improve their records, and for research data infrastructure teams who combine metadata from many
+          sources.</p>
 
         <h2>How it works</h2>
         <ol>

@@ -6,6 +6,8 @@
 
 Metadata Lens harvests real publication metadata from research repositories over **OAI-PMH**, checks its quality against the **OpenAIRE guidelines**, maps it to **Schema.org** and **DCAT**, builds an **RDF knowledge graph** and lets you query it with **SPARQL** in the browser. A scheduled workflow re-harvests and republishes it every week.
 
+**What it is for.** Repositories share publication metadata with search portals, aggregators and knowledge graphs. Missing DOIs, licences or clean dates make publications harder to find, cite, reuse and link. Metadata Lens shows what a harvester actually receives, scores each record, proposes fixes and spots duplicates, so repository teams can improve their records and infrastructure teams know how far they can trust them.
+
 Current sources: **JuSER** (Forschungszentrum Jülich, set `VDB`) and **KITopen** (Karlsruhe Institute of Technology), both public OAI-PMH endpoints.
 
 ## What it does
