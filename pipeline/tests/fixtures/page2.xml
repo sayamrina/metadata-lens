@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
+<responseDate>2026-10-22T10:00:05Z</responseDate>
+<request verb="ListRecords">https://repo.example/oai</request>
+<ListRecords>
+<record><header><identifier>oai:repo.example:3</identifier><datestamp>2026-10-03</datestamp></header>
+<metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dc:title>The Mixing Duration and Performance in NMC Electrodes</dc:title>
+<dc:creator>Lindner, A.</dc:creator>
+<dc:publisher>Elsevier</dc:publisher>
+<dc:date>16.10.2026</dc:date>
+<dc:type>info:eu-repo/semantics/embargoedAccess</dc:type>
+<dc:identifier>https://repo.example/record/3</dc:identifier>
+<dc:source>J. Power Sources 1 (2026). doi:10.1016/j.jpowsour.2026.1</dc:source>
+<dc:language>English</dc:language>
+<dc:rights>info:eu-repo/semantics/embargoedAccess</dc:rights>
+</oai_dc:dc></metadata></record>
+</ListRecords>
+<resumptionToken completeListSize="3" cursor="2"/>
+</OAI-PMH>

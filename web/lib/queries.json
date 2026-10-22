@@ -1,0 +1,29 @@
+{
+ "prefixes": "PREFIX schema: <https://schema.org/>\nPREFIX dcat: <http://www.w3.org/ns/dcat#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX ml: <https://sayamrina.github.io/metadata-lens/id/>\n",
+ "examples": [
+  {
+   "label": "Records per repository and type",
+   "query": "SELECT ?catalog ?type (COUNT(?work) AS ?records) WHERE {\n  ?catalog a dcat:Catalog ; dcterms:title ?title ; dcat:record/foaf:primaryTopic ?work .\n  ?work a ?type .\n} GROUP BY ?catalog ?type ORDER BY ?catalog DESC(?records)"
+  },
+  {
+   "label": "Most frequent authors",
+   "query": "SELECT ?name (COUNT(?work) AS ?works) WHERE {\n  ?work schema:author ?person . ?person schema:name ?name .\n} GROUP BY ?name ORDER BY DESC(?works) LIMIT 15"
+  },
+  {
+   "label": "Open access without a licence",
+   "query": "SELECT ?name ?work WHERE {\n  ?work schema:conditionsOfAccess \"openAccess\" ; schema:name ?name .\n  FILTER NOT EXISTS { ?work schema:license ?l }\n} LIMIT 25"
+  },
+  {
+   "label": "Licences in use",
+   "query": "SELECT ?licence (COUNT(?work) AS ?works) WHERE {\n  ?work schema:license ?licence .\n} GROUP BY ?licence ORDER BY DESC(?works)"
+  },
+  {
+   "label": "Lowest quality scores",
+   "query": "SELECT ?score ?name ?oai WHERE {\n  ?rec ml:qualityScore ?score ; foaf:primaryTopic ?work ; dcterms:identifier ?oai .\n  ?work schema:name ?name .\n} ORDER BY ?score LIMIT 15"
+  },
+  {
+   "label": "Authors in both repositories",
+   "query": "SELECT ?name (COUNT(DISTINCT ?catalog) AS ?repositories) WHERE {\n  ?work schema:author ?p ; schema:includedInDataCatalog ?catalog . ?p schema:name ?name .\n} GROUP BY ?name HAVING (COUNT(DISTINCT ?catalog) > 1) LIMIT 25"
+  }
+ ]
+}

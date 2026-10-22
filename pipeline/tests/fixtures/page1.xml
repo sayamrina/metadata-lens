@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
+<responseDate>2026-10-22T10:00:00Z</responseDate>
+<request verb="ListRecords">https://repo.example/oai</request>
+<ListRecords>
+<record><header status="deleted"><identifier>oai:repo.example:1</identifier><datestamp>2026-10-01</datestamp></header></record>
+<record><header><identifier>oai:repo.example:2</identifier><datestamp>2026-10-02</datestamp><setSpec>VDB</setSpec></header>
+<metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dc:title>Mixing duration and performance in NMC electrodes</dc:title>
+<dc:creator>Lindner, Adrian</dc:creator><dc:creator>Krewer, Ulrike</dc:creator>
+<dc:subject>info:eu-repo/classification/ddc/620</dc:subject><dc:subject>Lithium-ion battery</dc:subject>
+<dc:description>Electrode microstructure study.</dc:description>
+<dc:publisher>Elsevier Science</dc:publisher>
+<dc:date>2026-10-16</dc:date>
+<dc:type>info:eu-repo/semantics/article</dc:type><dc:type>info:eu-repo/semantics/publishedVersion</dc:type>
+<dc:identifier>https://repo.example/record/2</dc:identifier>
+<dc:relation>info:eu-repo/semantics/altIdentifier/doi/10.1016/j.jpowsour.2026.1</dc:relation>
+<dc:language>eng</dc:language>
+<dc:rights>info:eu-repo/semantics/openAccess</dc:rights>
+<dc:rights>https://creativecommons.org/licenses/by/4.0/deed.de</dc:rights>
+</oai_dc:dc></metadata></record>
+</ListRecords>
+<resumptionToken completeListSize="3" cursor="0">TOKEN1</resumptionToken>
+</OAI-PMH>
