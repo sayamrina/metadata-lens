@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import { fmtDate, load, type Rule, type Summary } from "../lib/data";
@@ -14,6 +15,12 @@ export default function About() {
       <header className="page-head">
         <h1>About this app</h1>
         <p>Metadata Lens is my own project. It works on real, public metadata and is rebuilt from the repositories every week.</p>
+        <div className="link-row">
+          <Link className="btn solid" href="/">Open the live app</Link>
+          <a className="btn" href="https://github.com/sayamrina/metadata-lens">Code on GitHub</a>
+          <a className="btn" href="https://www.linkedin.com/in/amrina-ali-487025119/" target="_blank" rel="noopener">LinkedIn</a>
+          <a className="btn" href="https://sayamrina.github.io/" target="_blank" rel="noopener">Portfolio</a>
+        </div>
       </header>
       <div className="prose">
         <h2>What this app is for</h2>
@@ -67,7 +74,7 @@ export default function About() {
         <p>Amrina (M.Sc. Educational Technology, Saarland University; B.Sc. Informatics). Design, rules and analysis are my own;
           AI was used as a supporting tool for coding. This is an independent project, not affiliated with Forschungszentrum
           Jülich, the Karlsruhe Institute of Technology or the Helmholtz Association.</p>
-        <p><a href="https://github.com/sayamrina/metadata-lens">Code on GitHub</a> · <a href="https://sayamrina.github.io/">Portfolio</a></p>
+        <p><Link href="/">Live app</Link> · <a href="https://github.com/sayamrina/metadata-lens">Code on GitHub</a> · <a href="https://www.linkedin.com/in/amrina-ali-487025119/">LinkedIn</a> · <a href="https://sayamrina.github.io/">Portfolio</a></p>
       </div>
     </Layout>
   );
